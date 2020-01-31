@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+
+
+
+  <div class="container">
+    Nombre del documento que se desea actualizar o guardar o eliminar<input type="text" name="docName" id="docName">
+    Nombre: <input type="text" name="nombre" id="nombre">
+    Ci: <input type="text" name="ci" id="ci">
+
+    <button onclick="save()" type="submit">Guardar</button>
+    <button onclick="delet()">Eliminar</button>
+    <button onclick="update()">Actualizar</button>
+    <button onclick="mostrar()">Mostrar documentos (en consola)</button>
+
+
+    <p id="info"></p>
+  </div>
+
+  
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig={
+      apiKey: "AIzaSyBEPBLdWZGqqTyL12EG_JmcNT70qLUvoUc",
+      authDomain: "exercisebdd2.firebaseapp.com",
+      databaseURL: "https://exercisebdd2.firebaseio.com",
+      projectId: "exercisebdd2",
+      storageBucket: "exercisebdd2.appspot.com",
+      messagingSenderId: "283844244337",
+      appId: "1:283844244337:web:974cd4e52f6273c34f3cd0",
+      measurementId: "G-YCQ4M9Q2DR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
